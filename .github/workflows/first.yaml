@@ -8,6 +8,8 @@ jobs:
         name: List all files
         runs-on:  ubuntu-latest
         steps: 
+        - name: Checking Out to Actual repo
+          uses: actions/checkout@v4
         - name: Listing All Files
           run:  ls
         - name: Reading Index file
