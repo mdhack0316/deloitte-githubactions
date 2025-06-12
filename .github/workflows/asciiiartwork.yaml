@@ -14,4 +14,9 @@ jobs:
             - name: installation 
               run: sudo apt-get install cowsay -y
             - name: running commands
-              run: cowsay -f dragon "Run on safe location"
+              run: cowsay -f dragon "Run on safe location dragon "  >> dragon.txt
+            - name: read file
+              run : | 
+                    cat dragon.txt
+                    grep -i dragon
+                    ls -la
