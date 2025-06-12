@@ -1,0 +1,22 @@
+name: multiLine Commands
+
+on: 
+    push: 
+        branches: 
+            - main
+    workflow_dispatch: 
+
+jobs: 
+    testing: 
+        name:  MultiLine Commands With Some Ascii Characters
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+            - name: running multiple commands
+              run: | 
+                    echo "Welcome to mayank Github Actions"
+                    ls -la
+                    cat index.html
+            - name: Ascii Artwork
+              run: cowsay -f dragon  "Runnnnnnn There is Dragon"   
