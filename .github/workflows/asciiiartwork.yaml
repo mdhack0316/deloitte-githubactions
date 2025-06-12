@@ -18,5 +18,5 @@ jobs:
             - name: read file
               run : | 
                     cat dragon.txt
-                    grep -i dragon
+                    grep -i dragon  dragon.txt
                     ls -la
