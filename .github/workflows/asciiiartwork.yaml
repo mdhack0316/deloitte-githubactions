@@ -1,0 +1,17 @@
+name: Artwork
+
+on: 
+    push: 
+        branches: 
+            - main
+    workflow_dispatch: 
+
+jobs: 
+    aertwork_installation: 
+        name:  MArtwork
+        runs-on: ubuntu-latest
+        steps:
+            - name: installation 
+              run: sudo apt-get install cowsay -y
+            - name: running commands
+              run: cowsay -f dragon "Run on safe location"

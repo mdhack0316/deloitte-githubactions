@@ -1,9 +1,9 @@
 name: multiLine Commands
 
 on: 
-    push: 
-        branches: 
-            - main
+    # push: 
+    #     branches: 
+    #         - main
     workflow_dispatch: 
 
 jobs: 
@@ -18,5 +18,5 @@ jobs:
                     echo "Welcome to mayank Github Actions"
                     ls -la
                     cat index.html
-            - name: Ascii Artwork
-              run: cowsay -f dragon  "Runnnnnnn There is Dragon"   
+            # - name: Ascii Artwork
+            #   run: cowsay -f dragon  "Runnnnnnn There is Dragon"   

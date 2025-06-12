@@ -1,7 +1,8 @@
 name: Testing Mayank Github Actions
 
 on: 
-    push: 
+    # push: 
+    workflow_dispatch: 
 
 jobs: 
     first: 
