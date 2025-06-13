@@ -9,7 +9,7 @@ jobs:
             - name: Installting Cowsay Software
               run: sudo apt-get install cowsay -y
             - name: Running Cowsay
-              run: cowsay  -f cat  "See the Cat" >>  cat.txt 
+              run: cowsay  -f dragon  "See the dragon" >>  cat.txt 
 
     deploy_job_2: 
         needs: build_job_1
@@ -18,4 +18,4 @@ jobs:
             - name: Read the file Cat.txt
               run: cat cat.txt
             - name: finding a word
-              run: grep -i cat cat.txt
+              run: grep -i dragon cat.txt
