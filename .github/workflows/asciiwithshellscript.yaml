@@ -1,0 +1,16 @@
+name: Using Shell Script
+on: 
+    workflow_dispatch: 
+jobs: 
+    shellscript: 
+        name: use a shell script to work with ascii 
+        runs-on: ubuntu-latest
+        steps: 
+        - name: checkout to my repo
+          uses: actions/checkout@v4
+        - name: testing repo files
+          run: ls -la
+        - name: using a shell script
+          run: | 
+                chmod +x ascii-script.sh
+                ./ascii-script.sh
