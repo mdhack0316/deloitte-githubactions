@@ -1,10 +1,10 @@
 name: Artwork
 
-    push: 
-        branches: 
-            - main
-    workflow_dispatch
-on: : 
+on:     # push: 
+    #     branches: 
+    #         - main
+    workflow_dispatch:
+
 
 jobs: 
     aertwork_installation: 
