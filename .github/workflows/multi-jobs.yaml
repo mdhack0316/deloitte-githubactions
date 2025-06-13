@@ -12,6 +12,7 @@ jobs:
               run: cowsay  -f cat  "See the Cat" >>  cat.txt 
 
     deploy_job_2: 
+        needs: build_job_1
         runs-on: ubuntu-latest
         steps: 
             - name: Read the file Cat.txt
