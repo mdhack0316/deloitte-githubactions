@@ -1,0 +1,20 @@
+name: Using Multiple Jobs
+on: 
+    workflow_dispatch: 
+
+jobs: 
+    build_job_1: 
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Installting Cowsay Software
+              run: sudo apt-get install cowsay -y
+            - name: Running Cowsay
+              run: cowsay  -f cat  "See the Cat" >>  cat.txt 
+
+    deploy_job_2: 
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Read the file Cat.txt
+              run: cat cat.txt
+            - name: finding a word
+              run: grep -i cat cat.txt
