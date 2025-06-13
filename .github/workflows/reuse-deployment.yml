@@ -1,0 +1,18 @@
+name: Deployment - Reusable Workflow
+
+on:
+    workflow_call: 
+  
+jobs:
+    reuse-deploy:
+        # environment: 
+        #     name: ${{ inputs.environment }}
+        #     url: https://${{ steps.set-ingress-host-address.outputs.APP_INGRESS_HOST }}
+        # outputs:
+            # APP_INGRESS_URL: ${{ steps.set-ingress-host-address.outputs.APP_INGRESS_HOST }}
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
+            - name: listing
+              run: ls -la
