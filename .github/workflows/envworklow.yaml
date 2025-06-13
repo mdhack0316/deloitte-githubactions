@@ -1,0 +1,22 @@
+name: Exploring Variables and Secret
+on:
+    push: 
+
+     
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Providing Step ENV   
+      env: 
+        CONTAINER_REGISTRY: docker.io
+        IMAGE_NAME: github-actions-nginx
+      run: echo docker build -t ${{ env.CONTAINER_REGISTRY }}/${{ vars.DOCKER_USERNAME }}/$IMAGE_NAME:latest
+
+    - name: Docker Login
+      env:
+        DOCKER_PASSWORD: mayank123modi
+      run: echo docker login --username=${{ vars.DOCKER_USERNAME }} --password=${{ secrets.DOCKER_PASSWORD }}
+
+    - name: docker pushing
+      run: echo docker push ${{ env.CONTAINER_REGISTRY }}/${{ vars.DOCKER_USERNAME }}/$IMAGE_NAME:latest
